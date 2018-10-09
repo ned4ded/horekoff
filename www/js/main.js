@@ -1,0 +1,2 @@
+"use strict";!function(){$("#display");var n=$("#menu-lining"),t=$("#menu-toggler"),c=t.data("target").map(function(n){return document.getElementById(n)}).filter(function(n){return n}),i=function(n){$(n).hasClass("active")?$(n).removeClass("active"):$(n).addClass("active")};t.click(function(){c.forEach(function(n){i(n)})}),n.click(function(){c.forEach(function(n){i(n)})})}();
+//# sourceMappingURL=main.js.map

@@ -1,0 +1,16 @@
+@import 'fonts/base.scss';
+@import 'variables/base.scss';
+
+body {
+  min-width: 350px;
+}
+
+
+.logotype {
+  &__img {
+    margin-top: 10px;
+  }
+}
+
+@import 'svg-sprite/base.scss';
+@import 'blocks/base.scss';
