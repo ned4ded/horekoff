@@ -3,13 +3,7 @@
 
 body {
   min-width: 350px;
-}
-
-
-.logotype {
-  &__img {
-    margin-top: 10px;
-  }
+  margin: 0;
 }
 
 @import 'svg-sprite/base.scss';

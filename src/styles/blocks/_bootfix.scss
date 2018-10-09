@@ -1,0 +1,38 @@
+h1 {
+  margin-top: 5px;
+  @include make-ff-rbt(28px);
+}
+
+h2 {
+  margin-top: 5px;
+  @include make-ff-rbt(26px);
+}
+
+h3 {
+  margin-top: 5px;
+  @include make-ff-rbt(24px);
+}
+
+h4 {
+  margin-top: 5px;
+  @include make-ff-rbt(22px, 300);
+}
+
+h5 {
+  margin-top: 5px;
+  @include make-ff-rbt(21px, 300);
+}
+
+h6 {
+  margin-top: 5px;
+  @include make-ff-rbt(20px, 300);
+}
+
+p {
+  margin-top: 5px;
+  @include make-ff-rbt(16px);
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

@@ -1,0 +1,37 @@
+[
+  {
+    "id" : "dashboard",
+    "ref" : "index.html",
+    "name" : "dashboard"
+  },
+  {
+    "id" : "groups",
+    "ref" : "index.html",
+    "name" : "группы"
+  },
+  {
+    "id" : "salespoints",
+    "ref" : "index.html",
+    "name" : "точки продажи"
+  },
+  {
+    "id" : "machines",
+    "ref" : "index.html",
+    "name" : "аппараты"
+  },
+  {
+    "id" : "orders",
+    "ref" : "index.html",
+    "name" : "заказы"
+  },
+  {
+    "id" : "profile",
+    "ref" : "index.html",
+    "name" : "профиль"
+  },
+  {
+    "id" : "exit",
+    "ref" : "index.html",
+    "name" : "выход"
+  }
+]

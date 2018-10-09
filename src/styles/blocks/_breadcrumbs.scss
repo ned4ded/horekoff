@@ -1,0 +1,55 @@
+.breadcrumbs {
+  display: flex;
+
+  margin: 0;
+  padding: 8px 0px 7px;
+
+  list-style: none;
+
+  border-bottom: 1px solid $color-grey-100;
+
+  &__item {
+    position: relative;
+
+    margin: 0px 5px;
+    padding-right: 5px;
+
+    color: $color-grey-300;
+
+    @include make-ff-rbt(20px, 300);
+
+    &:after {
+      position: absolute;
+      left: 100%;
+
+      content: '/';
+    }
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+      padding-right: 0;
+
+      &:after {
+        display: none;
+      }
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+
+    color: $color-grey-300;
+  }
+
+  &__item:last-child &__link {
+    color: $color-grey-400;
+
+    &:hover {
+      cursor: default;
+    }
+  }
+}

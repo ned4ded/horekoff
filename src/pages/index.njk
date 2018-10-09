@@ -1,28 +1,59 @@
+{% import "partials/side-nav.njk" as nav %}
+{% import "partials/breadcrumbs.njk" as bc %}
+{% set site = datasets.get('site-map') %}
+
 {% extends "layout.njk" %}
 
 {% block content %}
-  <div class="container">
-    {% set iter = [''] %}
-    {# {% set iter = ['', '', '', ''] %} #}
+  <div class="dashboard">
+    <nav class="dashboard__nav">
+      {{ nav.make('dashboard', site) }}
+    </nav>
 
-    {% for item in iter %}
-    <div class="row">
-      <div class="col-12">
-        <h1>Test</h1>
+    <div class="dashboard__content">
+      <div class="container">
+        <div class="custom row">
+          <div class="col-12">
+            <div class="dashboard__breadcrumbs">
+              {{ bc.make(['Bread', 'Crumbs']) }}
+            </div>
+          </div>
+        </div>
+
+        <div class="custom row">
+          <div class="col-12">
+            <h1>Dashboard</h1>
+          </div>
+
+          <div class="col-4">
+            <div class="box">
+              <h1>h1. heading</h1>
+              <h2>h2. heading</h2>
+              <h3>h3. heading</h3>
+              <h4>h4. heading</h4>
+              <h5>h5. heading</h5>
+              <h6>h6. heading</h6>
+            </div>
+          </div>
+
+          <div class="col-4">
+            <div class="box">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="box">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+            </div>
+          </div>
+        </div>
+
       </div>
-
-      <p class="col-6">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      </p>
-      <p class="col-6">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      </p>
-
-      <p class="col-12">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      </p>
     </div>
-    {% endfor %}
-
   </div>
+
 {% endblock %}

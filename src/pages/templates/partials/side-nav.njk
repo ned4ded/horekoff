@@ -1,0 +1,13 @@
+{% macro make(current, list) %}
+<ul class="side-nav">
+{% for item in list %}
+  {% set isCurrent = item.id === current %}
+  <li class="side-nav__item">
+    <a class="side-nav__link{{ ' side-nav__link--active' if isCurrent }}" href="{{ item.ref }}">
+      <span class="side-nav__icon side-nav__icon--{{ item.id }}"></span>
+      <span class="side-nav__text">{{ item.name | capitalize }}</span>
+    </a>
+  </li>
+{% endfor %}
+</ul>
+{% endmacro %}

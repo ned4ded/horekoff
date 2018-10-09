@@ -1,0 +1,113 @@
+.side-nav {
+  display: flex;
+  flex-flow: column nowrap;
+
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+  background-color: $color-lightest;
+  border-right: solid 1px $color-grey-100;
+  overflow: auto;
+
+  &__item {
+    min-height: 95px;
+    display: flex;
+    flex-flow: column nowrap;
+    border-bottom: solid 1px $color-grey-100;
+  }
+
+  &__link {
+    color: $color-grey-200;
+    padding: 12px 4px;
+    text-align: center;
+    display: flex;
+    flex-flow: column nowrap;
+    height: 100%;
+    @include make-ff-rbt(14px, 300);
+
+    &--active {
+      background-color: $color-contrast-100;
+      color: $color-lightest;
+    }
+  }
+
+  &__text {
+
+  }
+
+  &__icon {
+    display: block;
+    min-height: 50px;
+    flex-grow: 1;
+    background-size: 32px auto;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    &--dashboard {
+      background-image: url('../assets/imgs/icon-pie-chart-grey.png');
+    }
+
+    &--groups {
+      background-size: 34px auto;
+      background-image: url('../assets/imgs/icon-group-grey.png');
+    }
+
+    &--salespoints {
+      background-size: 28px auto;
+      background-image: url('../assets/imgs/icon-empty-pie-chart-grey.png');
+    }
+
+    &--machines {
+      background-position: calc(50% + 8px) center;
+      background-size: 42px auto;
+      background-image: url('../assets/imgs/icon-computer-grey.png');
+    }
+
+    &--orders {
+      background-size: 25px auto;
+      background-image: url('../assets/imgs/icon-pad-grey.png');
+    }
+
+    &--profile {
+      background-image: url('../assets/imgs/icon-profile-grey.png');
+    }
+
+    &--exit {
+      background-size: 29px auto;
+      background-image: url('../assets/imgs/icon-exit-grey.png');
+    }
+  }
+
+  &__link--active &__icon {
+    &--dashboard {
+      background-image: url('../assets/imgs/icon-pie-chart-white.png');
+    }
+
+    &--groups {
+      background-image: url('../assets/imgs/icon-group-white.png');
+    }
+
+    &--salespoints {
+      background-image: url('../assets/imgs/icon-empty-pie-chart-white.png');
+    }
+
+    &--machines {
+      background-image: url('../assets/imgs/icon-computer-white.png');
+    }
+
+    &--orders {
+      background-image: url('../assets/imgs/icon-pad-white.png');
+    }
+
+    &--profile {
+      background-image: url('../assets/imgs/icon-profile-white.png');
+    }
+
+    &--exit {
+      background-image: url('../assets/imgs/icon-exit-white.png');
+    }
+  }
+}
