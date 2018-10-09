@@ -1,5 +1,6 @@
 const gulp = require('gulp');
 const fs = require('fs');
+const htmlmin = require('gulp-htmlmin');
 const config = require('../gulpfile.config');
 const nunjucksRender = require('gulp-nunjucks-render');
 
@@ -7,7 +8,7 @@ module.exports = (browserSync) => gulp.task('render', function() {
   const envHooks = [
     env => env.addFilter('typeOf', function(el) {
       const type = typeof el;
-      
+
       const getType = (t) => {
         if(t == 'object') {
 
@@ -37,6 +38,7 @@ module.exports = (browserSync) => gulp.task('render', function() {
         return envHooks.forEach(fn => fn(env));
       },
     }))
+    .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(gulp.dest('www/'))
     .pipe(browserSync.stream());
 });
