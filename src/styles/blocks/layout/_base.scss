@@ -1,20 +1,21 @@
 .dashboard {
-  height: 100vh;
+  min-height: 100vh;
   overflow: hidden;
   display: flex;
   flex-flow: row nowrap;
+  align-items: stretch;
 
   &__nav {
-    height: 100%;
     min-width: 105px;
   }
 
   &__content {
-    flex-grow: 1;
-    background-color: $color-light-100;
+    padding-bottom: map-get($spacers, 4);
 
-    & .container {
-      max-width: calc(100% - 30px);
+    flex-grow: 1;
+
+    & > .container-fluid {
+      max-width: calc(100% - #{30px + $grid-gutter-width});
     }
   }
 }

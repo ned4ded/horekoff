@@ -1,0 +1,91 @@
+$primary:    #0077b3;
+// $contrast:   rgb(189, 255, 118);
+// $secondary:  #1a1a1a;
+$dark:       black;
+$light:      white;
+
+// $color-contrast-100: rgb(0, 118, 180);
+
+// $theme-colors: (
+//   "contrast": $contrast
+// );
+
+$body-bg:    rgb(242, 242, 242);
+$body-color: rgb(77, 77, 77);
+
+$yiq-text-dark: #000;
+
+$enable-rounded: false;
+
+$spacers: (
+  6: 3.5rem,
+  7: 8rem
+);
+
+$border-color: #fff;
+
+$text-muted: #666;
+
+$font-family-sans-serif: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+$link-hover-decoration: none;
+
+$paragraph-margin-bottom: 0.3125rem; // 5px
+
+$grid-gutter-width: 10px;
+
+$font-size-base: 1.125rem; // 18px
+$font-size-sm: 0.875rem; // 14px
+$font-size-lg: 1.5rem; // 24px
+
+$h1-font-size: 2.25rem; // 36px
+$h2-font-size: 2rem; // 32px
+$h3-font-size: 1.75rem; // 28px
+$h4-font-size: 1.5rem; // 24px
+$h5-font-size: 1.375rem; // 22px
+$h6-font-size: 1.25rem; // 20px
+
+$font-weight-bold: 500;
+
+$headings-margin-bottom: 0.3125rem; // 5px
+$headings-font-weight: 400;
+
+// Tables
+
+$table-cell-padding-y:        .625rem;
+$table-cell-padding-x:        1.875rem;
+
+$table-cell-padding:          $table-cell-padding-y $table-cell-padding-x;
+// $table-cell-padding-sm:       .3rem !default;
+//
+$table-accent-bg:             #f2f2f2;
+$table-hover-bg:              darken(#f2f2f2, 5%);
+// $table-active-bg:             $table-hover-bg !default;
+//
+$table-border-width:          1px;
+$table-border-color:          #72bed8;
+//
+// $table-head-bg:               $gray-200 !default;
+// $table-head-color:            $gray-700 !default;
+
+// $table-dark-bg:               $gray-900 !default;
+// $table-dark-accent-bg:        rgba($white, .05) !default;
+// $table-dark-hover-bg:         rgba($white, .075) !default;
+// $table-dark-border-color:     lighten($gray-900, 7.5%) !default;
+// $table-dark-color:            $body-bg !default;
+//
+// $table-striped-order:         odd !default;
+//
+// $table-caption-color:         $text-muted !default;
+
+$input-btn-padding-y:         .75rem;
+$input-btn-padding-x:         1.5rem;
+$btn-line-height:             1;
+
+
+// $input-bg: $secondary;
+// $input-disabled-bg: darken($secondary, 5%);
+// $input-color: white;
+// $input-border-color: $secondary;
+// $input-focus-border-color: lighten($secondary, 25%);
+// $input-placeholder-color: white;

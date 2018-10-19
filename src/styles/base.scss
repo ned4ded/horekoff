@@ -1,5 +1,8 @@
-@import 'fonts/base.scss';
-@import 'variables/base.scss';
+@import 'fonts/base';
+
+@import 'variables/base';
+
+@import 'bootfix/base';
 
 body {
   min-width: 350px;

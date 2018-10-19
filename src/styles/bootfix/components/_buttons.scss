@@ -1,0 +1,15 @@
+.btn {
+  min-width: 200px;
+  padding-top: calc(.05rem + #{ $btn-padding-y });
+  padding-bottom: calc(#{ $btn-padding-y } - .05rem);
+
+  border-radius: 0;
+
+  &-w-auto {
+    min-width: auto;
+  }
+
+  &-rounded {
+    border-radius: $btn-border-radius;
+  }
+}
