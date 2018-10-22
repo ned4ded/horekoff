@@ -350,33 +350,73 @@
               <a href="#" class="btn">.btn</a>
               <a href="#" class="btn btn-primary">.btn-primary</a>
               <a href="#" class="btn btn-primary btn-rounded">.btn-rounded</a>
+              <a href="#" class="btn btn-primary btn-circled">.btn-circled</a>
               <a href="#" class="btn btn-primary btn-w-auto">.btn-w-auto</a>
               <a href="#" class="btn btn-outline-primary">.btn-outline-primary</a>
+              <a href="#" class="btn btn-secondary">.btn-outline-secondary</a>
+              <span class="d-inline-block bg-light p-2">
+                <a href="#" class="btn btn-outline-secondary">.btn-outline-secondary</a>
+              </span>
             </p>
           </div>
 
-          {# <div class="col-12 mb-2 mt-4">
-            <h2 class="h1">Forms and inputs</h2>
+          <div class="col-12 mb-3 mt-6">
+            <h2 class="h1 text-center">Forms and inputs</h2>
           </div>
 
-          <div class="col-6">
-            <form>
+          <div class="col-6 offset-3">
+            <form class="box pt-3">
+              <div class="form-group">
+                <label>Select inline</label>
+                <select class="selectpicker" data-style="btn-secondary">
+                  <option>Mustard</option>
+                  <option data-subtext="Heinz">Ketchup</option>
+                  <option>Relish</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label>Select block</label>
+                <select class="selectpicker form-control" data-style="btn-primary">
+                  <option>Primary</option>
+                  <option>Ketchup</option>
+                  <option>Relish</option>
+                </select>
+                <select class="selectpicker form-control" data-style="btn-outline-primary">
+                  <option>Primary Outline</option>
+                  <option>Ketchup</option>
+                  <option>Relish</option>
+                </select>
+                <select class="selectpicker form-control" data-style="btn-secondary">
+                  <option>Mustard</option>
+                  <option>Ketchup</option>
+                  <option>Relish</option>
+                </select>
+              </div>
+
+
               <div class="form-group">
                 <label for="exampleInputEmail1">Email address</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" required>
                 <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
               </div>
+
               <div class="form-group">
                 <label for="exampleInputPassword1">Password</label>
                 <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
               </div>
+
               <div class="form-group form-check">
                 <input type="checkbox" class="form-check-input" id="exampleCheck1">
                 <label class="form-check-label" for="exampleCheck1">Check me out</label>
               </div>
-              <button type="submit" class="btn btn-primary">Submit</button>
+
+              <div class="form-group text-center">
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </div>
+
             </form>
-          </div> #}
+          </div>
         </div>
 
       </div>

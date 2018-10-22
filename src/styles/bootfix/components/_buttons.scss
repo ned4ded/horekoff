@@ -12,4 +12,8 @@
   &-rounded {
     border-radius: $btn-border-radius;
   }
+
+  &-circled {
+    border-radius: 25px;
+  }
 }

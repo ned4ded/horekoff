@@ -1,1 +1,1 @@
-{"version":3,"sources":[],"names":[],"mappings":"","file":"main.js","sourcesContent":[]}
+{"version":3,"sources":["terminal.js"],"names":["$","document","ready","selectpicker"],"mappings":"aACEA,EAAGC,UAAWC,MAAM,WAClBF,EAAE,iBAAiBG","file":"main.js","sourcesContent":["(() => {\n  $( document ).ready(() => {\n    $('.selectpicker').selectpicker();\n  });\n})();\n"]}
