@@ -12,6 +12,11 @@
     }
   }
 
+  .table {
+    background-color: transparent;
+    height: 100%;
+  }
+
   @include fluid;
 
   th {
@@ -70,6 +75,16 @@
   }
 
   &-gutters {
+    th, td {
+      &:first-child {
+        padding-left: $box-gutters-x;
+      }
+
+      &:last-child {
+        padding-right:  $box-gutters-x;
+      }
+    }
+
     &-box {
       width: calc(100% + #{$box-gutters-x} * 2);
       margin-right: -$box-gutters-x;
@@ -89,11 +104,137 @@
 
   &.small {
     @include fluid;
+
     th, td {
       padding-top: $table-cell-padding-y * 0.5;
       padding-right: $table-cell-padding-x * 0.5;
       padding-bottom: $table-cell-padding-y * 0.5;
       padding-left: $table-cell-padding-x * 0.5;
     }
+  }
+
+  &-narrow {
+    td, th {
+      line-height: 1;
+    }
+  }
+}
+
+.table-row {
+  @mixin fluid {
+    & > th,
+    & > td {
+      &:first-child {
+        padding-left: 0;
+      }
+
+      &:last-child {
+        padding-right: 0;
+      }
+    }
+  }
+
+  @include fluid;
+
+  &-borderless {
+    & > th,
+    & > td {
+      border: 0;
+    }
+  }
+
+  &-bordered {
+    & > th,
+    & > td {
+      border-bottom: $table-border-width solid $table-border-color;
+    }
+  }
+
+  &-no-delimiters {
+    & > th,
+    & > td {
+      &:after {display: none;}
+    }
+  }
+
+  &-delimiters {
+    & > th,
+    & > td {
+      &:after {display: block;}
+    }
+  }
+
+  &-gutters {
+    & > th,
+    & > td {
+      &:first-child {
+        padding-left: $box-gutters-x;
+      }
+
+      &:last-child {
+        padding-right:  $box-gutters-x;
+      }
+    }
+  }
+
+  &-no-gutters {
+    & > th,
+    & > td {
+      &:first-child {
+        padding-left: 0;
+      }
+
+      &:last-child {
+        padding-right:  0;
+      }
+    }
+  }
+
+  &-small {
+    @include fluid;
+
+    & > th,
+    & > td {
+      padding-top: $table-cell-padding-y * 0.5;
+      padding-right: $table-cell-padding-x * 0.5;
+      padding-bottom: $table-cell-padding-y * 0.5;
+      padding-left: $table-cell-padding-x * 0.5;
+    }
+  }
+
+  &-normal {
+    & > th,
+    & > td {
+      padding: $table-cell-padding-y $table-cell-padding-x;
+    }
+  }
+
+  &-narrow {
+    & > th,
+    & > td {
+      line-height: 1;
+    }
+  }
+
+  &-not-narrow {
+    & > th,
+    & > td {
+      line-height: $line-height-base;
+    }
+  }
+}
+
+.text-danger {
+  & > th,
+  & > td {
+    &:after {
+      background-color: theme-color('danger');
+    }
+  }
+}
+
+.table-cell {
+  &-no-delimiter {
+    &:after { display: none !important; }
   }
 }

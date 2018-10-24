@@ -1,0 +1,9 @@
+.icons {
+  display: inline-block;
+
+  &--w {
+    &--md {
+      min-width: 150px;
+    }
+  }
+}

@@ -2,6 +2,10 @@
   font-size: $font-size-lg;
 }
 
-.ws-nowrap {
-  white-space: nowrap;
+.small {
+  font-weight: 400;
+  
+  &-xs {
+    font-size: 70%;
+  }
 }
