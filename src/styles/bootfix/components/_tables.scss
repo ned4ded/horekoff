@@ -1,4 +1,18 @@
 .table {
+  $gutters: (
+    'xs' : (0.25rem, 0.25rem, 85%),
+    'sm' : ($table-cell-padding-y * 0.75, $table-cell-padding-x * 0.75, 90%),
+    'md' : ($table-cell-padding-y * 0.5, $table-cell-padding-x * 0.5, 95%),
+    'default' : ($table-cell-padding-y, $table-cell-padding-x, 100%),
+  );
+
+  th, td {
+    padding-top: $table-cell-padding-y * 0.5;
+    padding-right: $table-cell-padding-x * 0.5;
+    padding-bottom: $table-cell-padding-y * 0.5;
+    padding-left: $table-cell-padding-x * 0.5;
+  }
+
   @mixin fluid {
     th,
     td {
@@ -116,6 +130,26 @@
   &-narrow {
     td, th {
       line-height: 1;
+    }
+  }
+
+  @each $size, $value in $gutters {
+    $y: nth($value, 1);
+    $x: nth($value, 2);
+    $fz: nth($value, 3);
+
+    @each $bp in map-keys($grid-breakpoints) {
+      @include media-breakpoint-up($bp) {
+        $infix: breakpoint-infix($bp, $grid-breakpoints);
+
+        &#{$infix}-#{$size} {
+
+          th, td {
+            padding: $y $x;
+            font-size: $fz;
+          }
+        }
+      }
     }
   }
 }
@@ -236,5 +270,10 @@
 .table-cell {
   &-no-delimiter {
     &:after { display: none !important; }
+  }
+
+  &-no-gutters {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
   }
 }

@@ -7,9 +7,10 @@
 @import 'vendor/base';
 
 body {
-  min-width: 350px;
+  min-width: 1024px;
   margin: 0;
 }
 
 @import 'svg-sprite/base.scss';
 @import 'blocks/base.scss';
+@import 'pages/base.scss';
